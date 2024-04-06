@@ -14,6 +14,14 @@ class ContentViewModel {
     private let ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
     
     var reachable = false
+    var selectedModel: String {
+        get {
+            return UserDefaults.standard.string(forKey: "selectedModel") ?? ""
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "selectedModel")
+        }
+    }
     var availModels: [OKModelResponse.Model] = []
     
     func checkReachable() async {
