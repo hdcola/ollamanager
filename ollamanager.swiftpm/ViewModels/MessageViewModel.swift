@@ -19,12 +19,15 @@ class MessageViewModel {
     var isCompleted = true
     var errorMessage = ""
     var reply = ""
+    var lastMessages: [Dialogue] = []
+    var count = 0
     
     var cancellable = Set<AnyCancellable>()
     
     func sendMessage() {
         isCompleted = false
         errorMessage = ""
+        lastMessages.append(Dialogue(query: message, response: ""))
         let request = OKGenerateRequestData(model: model, prompt: message)
         ollamaKit.generate(data: request)
             .sink(
@@ -32,14 +35,22 @@ class MessageViewModel {
                     switch completion {
                     case .finished:
                         self.isCompleted = true
+                        self.reply = ""
+                        self.count += 1
                     case .failure(let error):
                         self.errorMessage = error.localizedDescription
                     }
                 }, receiveValue: { gresponse in
                     self.reply += gresponse.response
+                    self.lastMessages[self.count].response = self.reply
                 }
             )
             .store(in: &cancellable)
     }
     
+}
+
+struct Dialogue {
+    var query: String
+    var response: String
 }
