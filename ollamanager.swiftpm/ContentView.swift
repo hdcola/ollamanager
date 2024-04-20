@@ -9,24 +9,24 @@ struct ContentView: View {
     @State var message = ""
     var body: some View {
         VStack {
-            ScrollView {
-                MessageView(isCompleted: mvm.isCompleted, lm: mvm.lastMessages)
-            }
+            MessageView(isCompleted: mvm.isCompleted, lm: mvm.lastMessages)
             Spacer()
-            HStack{
+            HStack {
                 TextField("Message", text: $message)
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                     .textInputAutocapitalization(.never)
-                    .onSubmit {
-                        mvm.message = message
-                        mvm.model = vm.selectedModel
-                        mvm.sendMessage()
-                        message = ""
-                    }
                     .disabled(!mvm.isCompleted)
-                Image(systemName: "rays")
-                    .symbolEffect(.variableColor.iterative.hideInactiveLayers.nonReversing, options: .repeating, value: !mvm.isCompleted)
+                    .onSubmit {
+                        sendMessage()
+                    }
+                Button {
+                    sendMessage()
+                } label: {
+                    Image(systemName:mvm.isCompleted ? "arrow.up.square.fill" : "stop.circle.fill")
+                        .font(.title)
+                }
+                .disabled(message.isEmpty && mvm.isCompleted)
             }
             HStack {
                 Text("Status:")
@@ -38,15 +38,19 @@ struct ContentView: View {
                         Text($0.name)
                     }
                 }
+                .padding()
+                .onReceive(timer) { _ in
+                    Task {
+                        await vm.checkReachable()
+                        await vm.getModels()
+                    }
+                }
+                
             }
         }
-        .onReceive(timer) { _ in
-            Task {
-                await vm.checkReachable()
-                await vm.getModels()
-            }
-        }
-        .padding()
     }
-    
+    func sendMessage() {
+        mvm.sendButton(sendingMessage: message, usedModel: vm.selectedModel)
+        message = ""
+    }
 }

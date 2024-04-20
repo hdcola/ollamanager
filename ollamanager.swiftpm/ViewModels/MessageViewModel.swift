@@ -13,14 +13,13 @@ import Combine
 @Observable
 class MessageViewModel {
     private let ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
-    
+
     var message = ""
     var model = ""
     var isCompleted = true
     var errorMessage = ""
     var reply = ""
     var lastMessages: [Dialogue] = []
-    var count = 0
     
     var cancellable = Set<AnyCancellable>()
     
@@ -36,21 +35,34 @@ class MessageViewModel {
                     case .finished:
                         self.isCompleted = true
                         self.reply = ""
-                        self.count += 1
                     case .failure(let error):
                         self.errorMessage = error.localizedDescription
                     }
                 }, receiveValue: { gresponse in
                     self.reply += gresponse.response
-                    self.lastMessages[self.count].response = self.reply
+                    self.lastMessages[self.lastMessages.count-1].response = self.reply
                 }
             )
             .store(in: &cancellable)
     }
     
+    func sendButton(sendingMessage: String, usedModel: String) {
+        if isCompleted {
+            if !sendingMessage.isEmpty {
+                message = sendingMessage
+                model = usedModel
+                sendMessage()
+            }
+        } else {
+            cancellable.removeAll()
+            reply = ""
+            isCompleted = true
+        }
+    }
+    
 }
 
-struct Dialogue {
+struct Dialogue: Equatable, Hashable {
     var query: String
     var response: String
 }
