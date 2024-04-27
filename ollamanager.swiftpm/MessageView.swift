@@ -35,9 +35,7 @@ struct MessageView: View {
                         .id(bottomID)
                 }
                 .onChange(of:lm) { _ in
-                    withAnimation {
-                        proxy.scrollTo(bottomID, anchor: .bottom)
-                    }
+                    proxy.scrollTo(bottomID, anchor: .bottom)
                 }
             }
         }

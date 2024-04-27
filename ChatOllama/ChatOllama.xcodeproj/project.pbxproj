@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D5940C62BDD435100E85553 /* ChatOllamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940C52BDD435100E85553 /* ChatOllamaApp.swift */; };
+		5D5940C82BDD435100E85553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940C72BDD435100E85553 /* ContentView.swift */; };
+		5D5940CA2BDD435100E85553 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940C92BDD435100E85553 /* Item.swift */; };
+		5D5940CC2BDD435300E85553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5940CB2BDD435300E85553 /* Assets.xcassets */; };
+		5D5940CF2BDD435300E85553 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5940CE2BDD435300E85553 /* Preview Assets.xcassets */; };
+		5D5940DA2BDD435300E85553 /* ChatOllamaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940D92BDD435300E85553 /* ChatOllamaTests.swift */; };
+		5D5940E42BDD435300E85553 /* ChatOllamaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940E32BDD435300E85553 /* ChatOllamaUITests.swift */; };
+		5D5940E62BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */; };
+		5D5940F42BDD46CC00E85553 /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5940F32BDD46CC00E85553 /* OllamaKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D5940D62BDD435300E85553 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5940BA2BDD435100E85553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5940C12BDD435100E85553;
+			remoteInfo = ChatOllama;
+		};
+		5D5940E02BDD435300E85553 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5940BA2BDD435100E85553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5940C12BDD435100E85553;
+			remoteInfo = ChatOllama;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D5940C22BDD435100E85553 /* ChatOllama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatOllama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5940C52BDD435100E85553 /* ChatOllamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaApp.swift; sourceTree = "<group>"; };
+		5D5940C72BDD435100E85553 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5D5940C92BDD435100E85553 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5D5940CB2BDD435300E85553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D5940CE2BDD435300E85553 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D5940D02BDD435300E85553 /* ChatOllama.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatOllama.entitlements; sourceTree = "<group>"; };
+		5D5940D52BDD435300E85553 /* ChatOllamaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatOllamaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5940D92BDD435300E85553 /* ChatOllamaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaTests.swift; sourceTree = "<group>"; };
+		5D5940DF2BDD435300E85553 /* ChatOllamaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatOllamaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5940E32BDD435300E85553 /* ChatOllamaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaUITests.swift; sourceTree = "<group>"; };
+		5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D5940BF2BDD435100E85553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5940F42BDD46CC00E85553 /* OllamaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940D22BDD435300E85553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940DC2BDD435300E85553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D5940B92BDD435100E85553 = {
+			isa = PBXGroup;
+			children = (
+				5D5940C42BDD435100E85553 /* ChatOllama */,
+				5D5940D82BDD435300E85553 /* ChatOllamaTests */,
+				5D5940E22BDD435300E85553 /* ChatOllamaUITests */,
+				5D5940C32BDD435100E85553 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D5940C32BDD435100E85553 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940C22BDD435100E85553 /* ChatOllama.app */,
+				5D5940D52BDD435300E85553 /* ChatOllamaTests.xctest */,
+				5D5940DF2BDD435300E85553 /* ChatOllamaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D5940C42BDD435100E85553 /* ChatOllama */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940C52BDD435100E85553 /* ChatOllamaApp.swift */,
+				5D5940C72BDD435100E85553 /* ContentView.swift */,
+				5D5940C92BDD435100E85553 /* Item.swift */,
+				5D5940CB2BDD435300E85553 /* Assets.xcassets */,
+				5D5940D02BDD435300E85553 /* ChatOllama.entitlements */,
+				5D5940CD2BDD435300E85553 /* Preview Content */,
+			);
+			path = ChatOllama;
+			sourceTree = "<group>";
+		};
+		5D5940CD2BDD435300E85553 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940CE2BDD435300E85553 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D5940D82BDD435300E85553 /* ChatOllamaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940D92BDD435300E85553 /* ChatOllamaTests.swift */,
+			);
+			path = ChatOllamaTests;
+			sourceTree = "<group>";
+		};
+		5D5940E22BDD435300E85553 /* ChatOllamaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940E32BDD435300E85553 /* ChatOllamaUITests.swift */,
+				5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */,
+			);
+			path = ChatOllamaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D5940C12BDD435100E85553 /* ChatOllama */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5940E92BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllama" */;
+			buildPhases = (
+				5D5940BE2BDD435100E85553 /* Sources */,
+				5D5940BF2BDD435100E85553 /* Frameworks */,
+				5D5940C02BDD435100E85553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatOllama;
+			packageProductDependencies = (
+				5D5940F32BDD46CC00E85553 /* OllamaKit */,
+			);
+			productName = ChatOllama;
+			productReference = 5D5940C22BDD435100E85553 /* ChatOllama.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D5940D42BDD435300E85553 /* ChatOllamaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5940EC2BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllamaTests" */;
+			buildPhases = (
+				5D5940D12BDD435300E85553 /* Sources */,
+				5D5940D22BDD435300E85553 /* Frameworks */,
+				5D5940D32BDD435300E85553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D5940D72BDD435300E85553 /* PBXTargetDependency */,
+			);
+			name = ChatOllamaTests;
+			productName = ChatOllamaTests;
+			productReference = 5D5940D52BDD435300E85553 /* ChatOllamaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D5940DE2BDD435300E85553 /* ChatOllamaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5940EF2BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllamaUITests" */;
+			buildPhases = (
+				5D5940DB2BDD435300E85553 /* Sources */,
+				5D5940DC2BDD435300E85553 /* Frameworks */,
+				5D5940DD2BDD435300E85553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D5940E12BDD435300E85553 /* PBXTargetDependency */,
+			);
+			name = ChatOllamaUITests;
+			productName = ChatOllamaUITests;
+			productReference = 5D5940DF2BDD435300E85553 /* ChatOllamaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D5940BA2BDD435100E85553 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5D5940C12BDD435100E85553 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					5D5940D42BDD435300E85553 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5D5940C12BDD435100E85553;
+					};
+					5D5940DE2BDD435300E85553 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5D5940C12BDD435100E85553;
+					};
+				};
+			};
+			buildConfigurationList = 5D5940BD2BDD435100E85553 /* Build configuration list for PBXProject "ChatOllama" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D5940B92BDD435100E85553;
+			packageReferences = (
+				5D5940F22BDD46CC00E85553 /* XCRemoteSwiftPackageReference "OllamaKit" */,
+			);
+			productRefGroup = 5D5940C32BDD435100E85553 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D5940C12BDD435100E85553 /* ChatOllama */,
+				5D5940D42BDD435300E85553 /* ChatOllamaTests */,
+				5D5940DE2BDD435300E85553 /* ChatOllamaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D5940C02BDD435100E85553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5940CF2BDD435300E85553 /* Preview Assets.xcassets in Resources */,
+				5D5940CC2BDD435300E85553 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940D32BDD435300E85553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940DD2BDD435300E85553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D5940BE2BDD435100E85553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5940C82BDD435100E85553 /* ContentView.swift in Sources */,
+				5D5940CA2BDD435100E85553 /* Item.swift in Sources */,
+				5D5940C62BDD435100E85553 /* ChatOllamaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940D12BDD435300E85553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5940DA2BDD435300E85553 /* ChatOllamaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5940DB2BDD435300E85553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5940E62BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift in Sources */,
+				5D5940E42BDD435300E85553 /* ChatOllamaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D5940D72BDD435300E85553 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5940C12BDD435100E85553 /* ChatOllama */;
+			targetProxy = 5D5940D62BDD435300E85553 /* PBXContainerItemProxy */;
+		};
+		5D5940E12BDD435300E85553 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5940C12BDD435100E85553 /* ChatOllama */;
+			targetProxy = 5D5940E02BDD435300E85553 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5D5940E72BDD435300E85553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D5940E82BDD435300E85553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5D5940EA2BDD435300E85553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatOllama/ChatOllama.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatOllama/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatOllama;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5D5940EB2BDD435300E85553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatOllama/ChatOllama.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatOllama/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatOllama;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5D5940ED2BDD435300E85553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllamaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatOllama.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatOllama";
+			};
+			name = Debug;
+		};
+		5D5940EE2BDD435300E85553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllamaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatOllama.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatOllama";
+			};
+			name = Release;
+		};
+		5D5940F02BDD435300E85553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllamaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ChatOllama;
+			};
+			name = Debug;
+		};
+		5D5940F12BDD435300E85553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sicheng.hdcola.one.ChatOllamaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ChatOllama;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D5940BD2BDD435100E85553 /* Build configuration list for PBXProject "ChatOllama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5940E72BDD435300E85553 /* Debug */,
+				5D5940E82BDD435300E85553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5940E92BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5940EA2BDD435300E85553 /* Debug */,
+				5D5940EB2BDD435300E85553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5940EC2BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllamaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5940ED2BDD435300E85553 /* Debug */,
+				5D5940EE2BDD435300E85553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5940EF2BDD435300E85553 /* Build configuration list for PBXNativeTarget "ChatOllamaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5940F02BDD435300E85553 /* Debug */,
+				5D5940F12BDD435300E85553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D5940F22BDD46CC00E85553 /* XCRemoteSwiftPackageReference "OllamaKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kevinhermawan/OllamaKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D5940F32BDD46CC00E85553 /* OllamaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D5940F22BDD46CC00E85553 /* XCRemoteSwiftPackageReference "OllamaKit" */;
+			productName = OllamaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5D5940BA2BDD435100E85553 /* Project object */;
+}
