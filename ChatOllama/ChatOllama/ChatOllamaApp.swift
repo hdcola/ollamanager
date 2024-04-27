@@ -25,7 +25,8 @@ struct ChatOllamaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChatView()
+                .frame(minWidth: 100, minHeight: 400)
         }
         .modelContainer(sharedModelContainer)
     }
