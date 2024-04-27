@@ -19,8 +19,8 @@ let package = Package(
             bundleIdentifier: "sicheng.hdcola.one.ollamanager",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .butterfly),
-            accentColor: .presetColor(.teal),
+            appIcon: .placeholder(icon: .tv),
+            accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .pad,
                 .phone

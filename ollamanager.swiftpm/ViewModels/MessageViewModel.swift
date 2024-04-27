@@ -27,6 +27,7 @@ class MessageViewModel {
         isCompleted = false
         errorMessage = ""
         lastMessages.append(Dialogue(query: message, response: ""))
+        print(lastMessages)
         let request = OKGenerateRequestData(model: model, prompt: message)
         ollamaKit.generate(data: request)
             .sink(
@@ -35,6 +36,7 @@ class MessageViewModel {
                     case .finished:
                         self.isCompleted = true
                         self.reply = ""
+                        self.message = ""
                     case .failure(let error):
                         self.errorMessage = error.localizedDescription
                     }
@@ -56,6 +58,7 @@ class MessageViewModel {
         } else {
             cancellable.removeAll()
             reply = ""
+            message = ""
             isCompleted = true
         }
     }
