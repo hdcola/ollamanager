@@ -15,7 +15,7 @@ struct MessageView: View {
         ScrollView {
             ScrollViewReader { proxy in
                 VStack(alignment: .leading) {
-                    ForEach(lm, id: \.self.response) { dialogue in
+                    ForEach(lm, id: \.self) { dialogue in
                         Text("You:")
                             .font(.title3)
                             .foregroundColor(.blue)
