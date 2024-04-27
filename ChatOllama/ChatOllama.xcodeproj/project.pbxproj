@@ -16,6 +16,10 @@
 		5D5940E42BDD435300E85553 /* ChatOllamaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940E32BDD435300E85553 /* ChatOllamaUITests.swift */; };
 		5D5940E62BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */; };
 		5D5940F42BDD46CC00E85553 /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5940F32BDD46CC00E85553 /* OllamaKit */; };
+		5D5940F62BDD47A200E85553 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940F52BDD47A200E85553 /* ChatView.swift */; };
+		5D5940FA2BDD487900E85553 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940F92BDD487900E85553 /* MessageView.swift */; };
+		5D5940FC2BDD48B400E85553 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940FB2BDD48B400E85553 /* ChatViewModel.swift */; };
+		5D5940FE2BDD48C100E85553 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		5D5940DF2BDD435300E85553 /* ChatOllamaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatOllamaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5940E32BDD435300E85553 /* ChatOllamaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaUITests.swift; sourceTree = "<group>"; };
 		5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOllamaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D5940F52BDD47A200E85553 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		5D5940F92BDD487900E85553 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		5D5940FB2BDD48B400E85553 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 		5D5940C42BDD435100E85553 /* ChatOllama */ = {
 			isa = PBXGroup;
 			children = (
+				5D5940F82BDD481500E85553 /* ViewModel */,
+				5D5940F72BDD480F00E85553 /* View */,
 				5D5940C52BDD435100E85553 /* ChatOllamaApp.swift */,
 				5D5940C72BDD435100E85553 /* ContentView.swift */,
 				5D5940C92BDD435100E85553 /* Item.swift */,
@@ -132,6 +142,24 @@
 				5D5940E52BDD435300E85553 /* ChatOllamaUITestsLaunchTests.swift */,
 			);
 			path = ChatOllamaUITests;
+			sourceTree = "<group>";
+		};
+		5D5940F72BDD480F00E85553 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940F52BDD47A200E85553 /* ChatView.swift */,
+				5D5940F92BDD487900E85553 /* MessageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D5940F82BDD481500E85553 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D5940FB2BDD48B400E85553 /* ChatViewModel.swift */,
+				5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5940F62BDD47A200E85553 /* ChatView.swift in Sources */,
 				5D5940C82BDD435100E85553 /* ContentView.swift in Sources */,
+				5D5940FC2BDD48B400E85553 /* ChatViewModel.swift in Sources */,
 				5D5940CA2BDD435100E85553 /* Item.swift in Sources */,
+				5D5940FE2BDD48C100E85553 /* MessageViewModel.swift in Sources */,
 				5D5940C62BDD435100E85553 /* ChatOllamaApp.swift in Sources */,
+				5D5940FA2BDD487900E85553 /* MessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
