@@ -13,6 +13,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MessageView: View {
     var lm: [Dialogue]

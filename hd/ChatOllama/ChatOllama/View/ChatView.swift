@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-
-import SwiftUI
+import SwiftData
 
 struct ChatView: View {
     @State var vm = ChatViewModel()
@@ -15,11 +14,13 @@ struct ChatView: View {
     @AppStorage("selectedModel") var selectedModel = ""
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var message = ""
+    @Query var dialogues: [Dialogue]
+
     var body: some View {
         VStack {
-            MessageView(lm: mvm.lastMessages)
+            MessageView(lm: dialogues)
             Spacer()
-            VStack{
+            VStack {
                 HStack {
                     TextField("Message", text: $message)
                         .textFieldStyle(.roundedBorder)
@@ -31,7 +32,7 @@ struct ChatView: View {
                     Button {
                         sendMessage()
                     } label: {
-                        Image(systemName:mvm.isCompleted ? "arrow.up.circle.fill" : "stop.circle.fill")
+                        Image(systemName: mvm.isCompleted ? "arrow.up.circle.fill" : "stop.circle.fill")
                             .font(.title)
                     }
                     .disabled(message.isEmpty && mvm.isCompleted)
@@ -40,7 +41,7 @@ struct ChatView: View {
                     Text("Status:")
                     Image(systemName: "circle.fill")
                         .foregroundColor(vm.reachable ? .green : .red)
-                    Picker("Model",selection: $vm.selectedModel){
+                    Picker("Model", selection: $vm.selectedModel) {
                         Text("Select a model")
                         ForEach(vm.availModels, id: \.self.name) {
                             Text($0.name)
@@ -58,12 +59,15 @@ struct ChatView: View {
             .padding()
         }
     }
+
     func sendMessage() {
         mvm.sendButton(sendingMessage: message, usedModel: vm.selectedModel)
         message = ""
     }
 }
+
 #Preview {
     ChatView()
-        .frame(minWidth: 400,minHeight: 400)
+        .modelContainer(previewContainer)
+        .frame(minWidth: 400, minHeight: 400)
 }

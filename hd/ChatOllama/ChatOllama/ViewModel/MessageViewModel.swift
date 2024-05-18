@@ -71,8 +71,4 @@ class MessageViewModel {
     
 }
 
-struct Dialogue: Equatable, Hashable {
-    var query: String
-    var response: String
-}
 
