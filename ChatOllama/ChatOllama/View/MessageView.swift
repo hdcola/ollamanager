@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MessageView: View {
     var lm: [Dialogue]
     @Namespace var bottomID
+    
     var body: some View {
         ScrollView {
             ScrollViewReader { proxy in

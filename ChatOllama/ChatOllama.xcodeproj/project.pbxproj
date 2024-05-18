@@ -20,6 +20,7 @@
 		5D5940FA2BDD487900E85553 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940F92BDD487900E85553 /* MessageView.swift */; };
 		5D5940FC2BDD48B400E85553 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940FB2BDD48B400E85553 /* ChatViewModel.swift */; };
 		5D5940FE2BDD48C100E85553 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */; };
+		5D9A61E62BF8FCB0005E9FED /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A61E52BF8FCB0005E9FED /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5D5940F92BDD487900E85553 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		5D5940FB2BDD48B400E85553 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		5D9A61E52BF8FCB0005E9FED /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		5D5940B92BDD435100E85553 = {
 			isa = PBXGroup;
 			children = (
+				5D9A61E42BF8FC97005E9FED /* Support */,
 				5D5940C42BDD435100E85553 /* ChatOllama */,
 				5D5940D82BDD435300E85553 /* ChatOllamaTests */,
 				5D5940E22BDD435300E85553 /* ChatOllamaUITests */,
@@ -160,6 +163,14 @@
 				5D5940FD2BDD48C100E85553 /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D9A61E42BF8FC97005E9FED /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A61E52BF8FCB0005E9FED /* PreviewContainer.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				5D5940CA2BDD435100E85553 /* Item.swift in Sources */,
 				5D5940FE2BDD48C100E85553 /* MessageViewModel.swift in Sources */,
 				5D5940C62BDD435100E85553 /* ChatOllamaApp.swift in Sources */,
+				5D9A61E62BF8FCB0005E9FED /* PreviewContainer.swift in Sources */,
 				5D5940FA2BDD487900E85553 /* MessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

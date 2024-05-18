@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ChatView: View {
     @State var vm = ChatViewModel()
     @State var mvm = MessageViewModel()
+    @Query var dialogues: [Dialogue]
     @AppStorage("selectedModel") var selectedModel = ""
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var message = ""
     var body: some View {
         VStack {
-            MessageView(lm: mvm.lastMessages)
+            MessageView(lm: dialogues)
             Spacer()
             HStack {
                 TextField("Message", text: $message)
@@ -64,4 +66,5 @@ struct ChatView: View {
 #Preview {
     ChatView()
         .frame(minWidth: 200, minHeight: 400)
+        .modelContainer(previewContainer)
 }

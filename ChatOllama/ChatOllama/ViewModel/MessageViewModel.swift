@@ -8,6 +8,7 @@
 import SwiftUI
 import OllamaKit
 import Combine
+import SwiftData
 
 @Observable
 class MessageViewModel {
@@ -64,7 +65,13 @@ class MessageViewModel {
     
 }
 
-struct Dialogue: Equatable, Hashable {
+@Model
+class Dialogue {
     var query: String
     var response: String
+    
+    init(query: String, response: String) {
+        self.query = query
+        self.response = response
+    }
 }
