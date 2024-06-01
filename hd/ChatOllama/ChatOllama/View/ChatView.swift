@@ -7,18 +7,24 @@
 
 import SwiftUI
 import SwiftData
+import OllamaKit
+import Combine
+
 
 struct ChatView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Environment(MessageViewModel.self) private var mvm
     @State var vm = ChatViewModel()
-    @State var mvm = MessageViewModel()
     @AppStorage("selectedModel") var selectedModel = ""
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var message = ""
-    @Query var dialogues: [Dialogue]
+
+    private let ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
+    
 
     var body: some View {
         VStack {
-            MessageView(lm: dialogues)
+            MessageView(lm: mvm.lastMessages)
             Spacer()
             VStack {
                 HStack {
@@ -56,6 +62,9 @@ struct ChatView: View {
                     }
                 }
             }
+            .task {
+                try? mvm.fetch()
+            }
             .padding()
         }
     }
@@ -69,5 +78,6 @@ struct ChatView: View {
 #Preview {
     ChatView()
         .modelContainer(previewContainer)
+        .environment(mvm)
         .frame(minWidth: 400, minHeight: 400)
 }

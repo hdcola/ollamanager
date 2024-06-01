@@ -15,9 +15,11 @@
 import SwiftUI
 import OllamaKit
 import Combine
+import SwiftData
 
 @Observable
 class MessageViewModel {
+    private var modelContext: ModelContext
     private let ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
 
     var message = ""
@@ -29,11 +31,22 @@ class MessageViewModel {
     
     var cancellable = Set<AnyCancellable>()
     
+    init(modelContext: ModelContext) {
+        self.modelContext = modelContext
+    }
+    
+    func fetch() throws{
+        let fetchDescription = FetchDescriptor<Dialogue>()
+        lastMessages = try modelContext.fetch(fetchDescription)
+    }
+    
     func sendMessage() {
         isCompleted = false
         errorMessage = ""
-        lastMessages.append(Dialogue(query: message, response: ""))
-        print(lastMessages)
+        let dialogue = Dialogue(query: message, response: "")
+        lastMessages.append(dialogue)
+        modelContext.insert(dialogue)
+        try? modelContext.saveChanges()
         let request = OKGenerateRequestData(model: model, prompt: message)
         ollamaKit.generate(data: request)
             .sink(
@@ -43,8 +56,10 @@ class MessageViewModel {
                         self.isCompleted = true
                         self.reply = ""
                         self.message = ""
+                        try? self.modelContext.saveChanges()
                     case .failure(let error):
                         self.errorMessage = error.localizedDescription
+                        try? self.modelContext.saveChanges()
                     }
                 }, receiveValue: { gresponse in
                     self.reply += gresponse.response

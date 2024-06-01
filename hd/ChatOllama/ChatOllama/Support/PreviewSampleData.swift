@@ -20,3 +20,6 @@ let previewContainer: ModelContainer = {
         fatalError("Failed to create container")
     }
 }()
+
+@MainActor
+let mvm = MessageViewModel(modelContext: previewContainer.mainContext)

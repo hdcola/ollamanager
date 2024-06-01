@@ -16,3 +16,16 @@ class Dialogue {
         self.response = response
     }
 }
+
+extension Dialogue: Hashable{
+    static func == (lhs: Dialogue, rhs: Dialogue) -> Bool{
+        lhs.query == rhs.query &&
+        lhs.response == rhs.response
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(query)
+        hasher.combine(response)
+    }
+}
+

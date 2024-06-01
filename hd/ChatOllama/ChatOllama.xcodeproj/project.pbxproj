@@ -23,6 +23,7 @@
 		67C84A1F2BDD487E00CBAE70 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C84A1E2BDD487E00CBAE70 /* MessageView.swift */; };
 		67C84A212BDD48BC00CBAE70 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C84A202BDD48BC00CBAE70 /* MessageViewModel.swift */; };
 		67C84A232BDD48CC00CBAE70 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C84A222BDD48CC00CBAE70 /* ChatViewModel.swift */; };
+		67FD6D042C02386D00648349 /* ModelContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD6D032C02386D00648349 /* ModelContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		67C84A1E2BDD487E00CBAE70 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		67C84A202BDD48BC00CBAE70 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		67C84A222BDD48CC00CBAE70 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		67FD6D032C02386D00648349 /* ModelContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		67C849E92BDD435500CBAE70 /* ChatOllama */ = {
 			isa = PBXGroup;
 			children = (
+				67FD6D022C02384C00648349 /* Extensions */,
 				672224982BF8FC6200296B21 /* Support */,
 				67C84A1D2BDD481300CBAE70 /* ViewModel */,
 				67C84A1C2BDD480B00CBAE70 /* View */,
@@ -177,6 +180,14 @@
 				6722249B2BF8FD9700296B21 /* SampleDialogur.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67FD6D022C02384C00648349 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67FD6D032C02386D00648349 /* ModelContext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +331,7 @@
 				6722249C2BF8FD9700296B21 /* SampleDialogur.swift in Sources */,
 				67C84A232BDD48CC00CBAE70 /* ChatViewModel.swift in Sources */,
 				67C849ED2BDD435500CBAE70 /* ContentView.swift in Sources */,
+				67FD6D042C02386D00648349 /* ModelContext.swift in Sources */,
 				672224972BF8FBED00296B21 /* Dialogue.swift in Sources */,
 				67C849EF2BDD435500CBAE70 /* Item.swift in Sources */,
 				67C849EB2BDD435500CBAE70 /* ChatOllamaApp.swift in Sources */,
