@@ -16,13 +16,13 @@ import SwiftUI
 import SwiftData
 
 struct MessageView: View {
-    var lm: [Dialogue]
+    @Environment(MessageViewModel.self) private var mvm
     @Namespace var bottomID
     var body: some View {
         ScrollView {
             ScrollViewReader { proxy in
                 VStack(alignment: .leading) {
-                    ForEach(lm, id: \.self) { dialogue in
+                    ForEach(mvm.lastMessages) { dialogue in
                         Text("You:")
                             .font(.title3)
                             .foregroundColor(.blue)
@@ -41,7 +41,7 @@ struct MessageView: View {
                     Image(systemName: "one of the most stupid pieces of code ever written")
                         .id(bottomID)
                 }
-                .onChange(of:lm, initial: false) { _,_  in
+                .onChange(of:mvm.lastMessages, initial: false) { _,_  in
                     proxy.scrollTo(bottomID, anchor: .bottom)
                 }
             }
@@ -50,7 +50,7 @@ struct MessageView: View {
     }
 }
 
-
-#Preview {
-    MessageView(lm: [Dialogue(query: "Hello", response: "Hi")])
-}
+//
+//#Preview {
+//    MessageView(lm: [Dialogue(query: "Hello", response: "Hi")])
+//}

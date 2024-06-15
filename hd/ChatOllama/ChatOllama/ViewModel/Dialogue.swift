@@ -6,16 +6,20 @@
 //
 
 import SwiftData
+import Foundation
 
 @Model
-class Dialogue {
+class Dialogue : Identifiable{
+    var id: UUID
     var query: String
     var response: String
     init(query: String, response: String) {
         self.query = query
         self.response = response
+        self.id = UUID()
     }
 }
+
 
 extension Dialogue: Hashable{
     static func == (lhs: Dialogue, rhs: Dialogue) -> Bool{

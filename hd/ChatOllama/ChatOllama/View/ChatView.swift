@@ -24,7 +24,7 @@ struct ChatView: View {
 
     var body: some View {
         VStack {
-            MessageView(lm: mvm.lastMessages)
+            MessageView()
             Spacer()
             VStack {
                 HStack {
